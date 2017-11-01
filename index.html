@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Brunch</title>
+  <link rel="stylesheet" href="/app.css">
+  <script src="/userchat.js"></script>
+  <script>
+    let config = window.userChatConfig = {
+      currentUser: {
+        id: "c2069e71-9536-4abd-8223-e24c80f2cc2e",
+        email: "travis@grillwork.io",
+        name: "Travis Mathis"
+      },
+      key: "38195609-8277-40bb-846c-d1eb706aa101",
+      socketUrl: "wss://ws.userchat.io:8080",
+      // socketUrl: "ws://localhost:8080",
+    }
+
+    var userChat = window.userChat = require('user-chat-sdk').default;
+
+    document.addEventListener('DOMContentLoaded', function() {
+      let options = {
+        id: 'demo.thread',
+        name: 'Demo Thread Proposal',
+        users: [{
+          id: '915a4cc7-031d-4c28-b8fa-463c5b4dedbe',
+          email: 'dan@grillwork.io',
+          name: 'Dan Matthews'
+        }],
+      };
+
+      userChat.box.create('#app', options);
+    });
+
+
+
+  </script>
+</head>
+<body>
+  <div id="app" style="height:500px; width:300px;"></div>
+</body>
