@@ -1,5 +1,5 @@
-userchat.css.map
-userchat.js.map
+userchat-*.css.map
+userchat-*.js.map
 index.html
 *.diff
 *.err
